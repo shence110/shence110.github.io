@@ -1,526 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
-    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
-    
-    <title>文章归档 | Hexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
-    <meta name="keywords" content="TinyCe, 后台, 后台开发, java, python" >
-    <meta name="description" content="TinyCe的个人博客" >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
-    
-    
-    <link rel="shortcut icon" href="/favicon.ico" >
-    
-    <link rel="stylesheet" href="/css/style.css">
-    <!--[if lt IE 9]>
-    <script src="/js/html5.js"></script>
-    <![endif]-->
-    
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+        
+        <title>
+            时间轴 | Hexo
+        </title>
+        
+        <meta name="keywords" content="" >
+        <meta name="description" content="" >
+        
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
 
-
-</head>
-
-<body class="home">
-    <!--[if lt IE 9]>
-    <div class="browsehappy">
-        当前网页 <strong>不支持</strong>
-        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
-    </div>
-    <![endif]-->
-
-    <!-- 博客头部 -->
-    <header class="header">
-    <section class="container header-main">
-        <div class="logo">
-            <a href="/">
-                <div class="cover">
-                    <span class="name">Hexo</span>
-                    <span class="description"></span>
-                </div>
-            </a>
+    <body class="home">
+        <!--[if lt IE 9]>
+        <div class="browsehappy">
+            当前网页 <strong>不支持</strong>
+            你正在使用的浏览器. 为了正常的访问, 请<a href="http://browsehappy.com/">升级你的浏览器</a>.
         </div>
-        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
-        <ul class="menu hidden" id="JELON__menu">
-            
-            <li rel="/archives/index.html" class="item ">
-                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
-            </li>
-            
-            <li rel="/archives/index.html" class="item ">
-                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
-            </li>
-            
-            <li rel="/archives/index.html" class="item ">
-                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
-            </li>
-            
-            <li rel="/archives/index.html" class="item ">
-                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
-            </li>
-            
-        </ul>
-        <div class="profile clearfix">
-            <div class="feeds fl">
-                
-                
-                <p class="links">
-                    
-                        <a href="https://github.com/shence110" target="_blank">Github</a>
-                        |
-                    
-                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
-                        
-                    
-                </p>
-                <p class="sns">
-                    
-                        <a href="http://weibo.com/" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
-                    
-                        <a href="https://www.facebook.com/profile.php" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
-                    
-                    <a href="javascript: void(0);" class="wechat">
-                        <b>■</b>
-                        公众号
-                        <span class="popover">
-                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
-                            <i class="arrow"></i>
-                        </span>
-                    </a>
-                </p>
-                
-            </div>
-            <div class="avatar fr">
-                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
-            </div>
-        </div>
-    </section>
+        <![endif]-->
+
+        <header class="main-header">
+	<div class="container">
+		<div class="logo">
+			<h1 id="title">
+				<a href="/">TinyCe</a>
+			</h1>
+		</div>
+		<div class="toggle">
+			<i class="fa fa-bars"></i>
+		</div>
+		<div class="navbar">
+			<ul>
+			
+				<li><a href="/">首页</a></li>
+			
+				<li><a href="/categories/">分类</a></li>
+			
+				<li><a href="/archives/">归档</a></li>
+			
+				<li><a href="/about/">关于</a></li>
+			
+			</ul>
+		</div>
+		<div class="search">
+			<button type="submit" class="search-submit">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			搜索</button>
+		</div>
+	</div>
 </header>
 
+        <div class="container">
+            <!-- 归档 -->
+<!-- 页面重写 -->
+            <aside class="sidebar">
+	<div class="widget">
+		<h3 class="widget-h">
+			<span>文章分类</span>
+		</h3>
+		<ul>
+		    
+			    <li>
+			        <a href="/categories/Aaa/">Aaa (4)</a>
+			    </li>
+		    
+			    <li>
+			        <a href="/categories/异想天开/">异想天开 (1)</a>
+			    </li>
+		    
+			    <li>
+			        <a href="/categories/Bbb/">Bbb (1)</a>
+			    </li>
+		    
+		</ul>
+	</div>
 
-    <!-- 博客正文 -->
-    <div class="container body clearfix">
-        <section class="content">
-            <div class="content-main widget">
-                <!-- 文章归档 -->
+	<div class="widget">
+		<h3 class="widget-h">
+			<span>热门标签</span>
+		</h3>
+		<ul class="widget-tag">
+			
+				<a class="tag-item" href="/tags/Aaa/" title="Aaa">Aaa (3)</a>
+			
+				<a class="tag-item" href="/tags/Bbb/" title="Bbb">Bbb (3)</a>
+			
+				<a class="tag-item" href="/tags/Eee/" title="Eee">Eee (1)</a>
+			
+				<a class="tag-item" href="/tags/Fff/" title="Fff">Fff (1)</a>
+			
+				<a class="tag-item" href="/tags/Ccc/" title="Ccc">Ccc (2)</a>
+			
+				<a class="tag-item" href="/tags/Ddd/" title="Ddd">Ddd (1)</a>
+			
+				<a class="tag-item" href="/tags/Ggg/" title="Ggg">Ggg (1)</a>
+			
+				<a class="tag-item" href="/tags/Hhh/" title="Hhh">Hhh (1)</a>
+			
+		</ul>
+	</div>
 
-    <h3 class="widget-hd">
-        <strong>
-            
-                文章归档
-            
-        </strong>
-    </h3>
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Aaa/">Aaa</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/09/03/hello-world6/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-09-03T14:27:46.265Z">2018-09-03</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Aaa/" title="Aaa">Aaa</a> / 
-    
-        <a href="/tags/Bbb/" title="Bbb">Bbb</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/09/03/hello-world6/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/09/03/hello-world6/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Aaa/">Aaa</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/09/03/hello-world5/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-09-03T14:27:46.263Z">2018-09-03</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Ggg/" title="Ggg">Ggg</a> / 
-    
-        <a href="/tags/Hhh/" title="Hhh">Hhh</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/09/03/hello-world5/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/09/03/hello-world5/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Aaa/">Aaa</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/09/03/hello-world4/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-09-03T14:27:46.261Z">2018-09-03</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Eee/" title="Eee">Eee</a> / 
-    
-        <a href="/tags/Fff/" title="Fff">Fff</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/09/03/hello-world4/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/09/03/hello-world4/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/异想天开/">异想天开</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/09/03/hello-world3/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-09-03T14:27:46.259Z">2018-09-03</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Ccc/" title="Ccc">Ccc</a> / 
-    
-        <a href="/tags/Ddd/" title="Ddd">Ddd</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/09/03/hello-world3/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/09/03/hello-world3/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Bbb/">Bbb</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/09/03/hello-world2/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-09-03T14:27:46.258Z">2018-09-03</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Aaa/" title="Aaa">Aaa</a> / 
-    
-        <a href="/tags/Bbb/" title="Bbb">Bbb</a> / 
-    
-        <a href="/tags/Ccc/" title="Ccc">Ccc</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/09/03/hello-world2/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/09/03/hello-world2/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Aaa/">Aaa</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/08/06/hello-world/">
-    		Hello World
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-08-06T08:07:17.428Z">2018-08-06</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Aaa/" title="Aaa">Aaa</a> / 
-    
-        <a href="/tags/Bbb/" title="Bbb">Bbb</a>
-    
-
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/08/06/hello-world/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/08/06/hello-world/" title="Hello World">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-</article>
-
-    
-
-    
-    <nav class="page-navigator">
-        <span class="page-number current">1</span>
-    </nav>
-    
-
-
-            </div>
-
-        </section>
-        <!-- 侧栏部分 -->
-<aside class="sidebar">
-    <section class="widget">
-        <h3 class="widget-hd"><strong>文章分类</strong></h3>
-        <!-- 文章分类 -->
-<ul class="widget-bd">
-    
-    <li>
-        <a href="/categories/Aaa/">Aaa</a>
-        <span class="badge">(4)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/异想天开/">异想天开</a>
-        <span class="badge">(1)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/Bbb/">Bbb</a>
-        <span class="badge">(1)</span>
-    </li>
-    
-</ul>
-    </section>
-
-    
-    <section class="widget">
-        <h3 class="widget-hd"><strong>热门标签</strong></h3>
-        <!-- 文章标签 -->
-<div class="widget-bd tag-wrap">
-  
-    <a class="tag-item" href="/tags/Aaa/" title="Aaa">Aaa (3)</a>
-  
-    <a class="tag-item" href="/tags/Bbb/" title="Bbb">Bbb (3)</a>
-  
-    <a class="tag-item" href="/tags/Eee/" title="Eee">Eee (1)</a>
-  
-    <a class="tag-item" href="/tags/Fff/" title="Fff">Fff (1)</a>
-  
-    <a class="tag-item" href="/tags/Ccc/" title="Ccc">Ccc (2)</a>
-  
-    <a class="tag-item" href="/tags/Ddd/" title="Ddd">Ddd (1)</a>
-  
-    <a class="tag-item" href="/tags/Ggg/" title="Ggg">Ggg (1)</a>
-  
-    <a class="tag-item" href="/tags/Hhh/" title="Hhh">Hhh (1)</a>
-  
-</div>
-    </section>
-    
-
-    
-
-    
 </aside>
-<!-- / 侧栏部分 -->
-    </div>
+        </div>
 
-    <!-- 博客底部 -->
-    <footer class="footer">
-    &copy;
-    
-        2016-2018
-    
-
-    <a href="/">Jelon Loves You</a>
+        <footer class="main-footer">
+	<span>Copyright &copy;
+		2018-
+	</span> | 
+	<span>Powered by
+		<a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+	</span> | 
+	<span>Theme by
+		<a href="//github.com/shence110/hexo-theme-orange.git" class="copyright-links" target="_blank" rel="nofollow">Orange</a>
+	</span>
 </footer>
-<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
-
-    <!--博客js脚本 -->
-    <!-- 这里放网站js脚本 -->
-<script src="/js/main.js"></script>
-</body>
+        
+    </body>
 </html>
